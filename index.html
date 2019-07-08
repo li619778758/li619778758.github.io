@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+		<!--<script type="text/javascript" src="http://www.jq22.com/demo/CanvasParticles-master20160907/canvas-particle.js"></script>-->
+		<script src="canvas-particle.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body style="background: #000;">
+		<div id="mydiv"></div>
+	</body>
+	<script type="text/javascript">
+	window.onload = function(){
+    //配置
+    var config = {
+        vx: 4,//点x轴速度,正为右，负为左
+        vy:  4,//点y轴速度
+        height: 2,//点高宽，其实为正方形，所以不宜太大
+        width: 2,
+        count: 100,//点个数
+        color: "121, 162, 185",//点颜色
+        stroke: "130,255,255",//线条颜色
+        dist: 6000,//点吸附距离
+        e_dist: 20000,//鼠标吸附加速距离
+        max_conn: 10//点到点最大连接数
+    }
+    //调用
+    CanvasParticle(config);
+}
+
+	</script>
+</html>
